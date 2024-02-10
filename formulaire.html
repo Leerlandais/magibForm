@@ -27,16 +27,12 @@
         <div><input type="radio" name="genre" id="femme" value="F"><label for="femme" id="femLab">Femme</label></div>
     </div>
     <div id="passwordDiv">
-        <label for="pass">Password <span id="miniText">At least 8 letters. Capital, Number and Symbol must be used at least once</span></label><input type="password" name="prenom" id="password" required>
+        <label for="pass">Password <span id="miniText">At least <span id="goodLet">8 letters</span>, a <span id="goodCap">Capital</span>, <span id="goodNum">Number</span> and a <span id="goodSym">Symbol</span> must be used at least once</span></label><input type="password" name="prenom" id="password" required onkeypress="doThisNow()">
         <button id="togglePassword">Show</button>
     </div>
     <input type="submit" value="Submit Form" id="subButton">
 </form><br>
-<span class="passSpan" id="goodL">- Password must be 8 letters or more</span><br>
-<span class="passSpan" id="goodC">- At least one letter needs to be a capital</span><br>
-<span class="passSpan" id="goodN">- Must contain at least one number</span><br>
-<span class="passSpan" id="goodS">- Must contain a symbol</span>
-<span class="passSpan" id="goodA">- Sorry, you aren't old enough to access this site</span>
+
 </fieldset><br><br><br>
 <footer><hr>
     <h4 id="copyright">
