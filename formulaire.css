@@ -47,3 +47,18 @@ label{
     display: flex;
     opacity: 0;
 }
+
+footer {
+    text-align: center;
+    font-style: italic;
+    font-family: cursive;
+}
+
+#copyright{                 
+    transition: transform 50s ease-in-out;
+}
+
+#copyright:hover {
+    transform: rotateY(-36000deg);
+   
+} 
