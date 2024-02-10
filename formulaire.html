@@ -13,10 +13,10 @@
 <form action="" id = "myForm">
     <div id="yourLName">
         <label for="nom">Nom</label>
-        <input type="text" name="nom" id="nom">
+        <input type="text" name="nom" id="nom" required>
     </div>
     <div id="yourFName">
-        <label for="prenom">Prénom</label><input type="text" name="prenom" id="prenom">
+        <label for="prenom">Prénom</label><input type="text" name="prenom" id="prenom" required>
     </div>        
     <div id="yourDOB">
         <label for="dob">Date du Naissance</label><input type="date" name="dob" id="naissance">
@@ -32,9 +32,10 @@
     <input type="submit" value="Submit Form" id="subButton">
 </form><br>
 <span class="passSpan" id="goodL">- Password must be 8 letters or more</span><br>
-<span class="passSpan" id="goodC">- One of which needs to be a capital</span><br>
-<span class="passSpan" id="goodN">- And it needs at least one number</span><br>
-<span class="passSpan" id="goodS">- And a symbol, too</span>
+<span class="passSpan" id="goodC">- At least one letter needs to be a capital</span><br>
+<span class="passSpan" id="goodN">- Must contain at least one number</span><br>
+<span class="passSpan" id="goodS">- Must contain a symbol</span>
+<span class="passSpan" id="goodA">- Sorry, you aren't old enough to access this site</span>
 </fieldset>
 <script src="formulaire.js"></script>
 </body>

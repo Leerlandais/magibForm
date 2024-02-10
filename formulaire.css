@@ -45,4 +45,5 @@ label{
     color: red;
     justify-content: center;
     display: flex;
+    opacity: 0;
 }
