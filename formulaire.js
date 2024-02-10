@@ -7,11 +7,11 @@ const goodA = document.getElementById("goodA");
 const nom = document.getElementById("nom");
 const prenom = document.getElementById("prenom");
 const naissance = document.getElementById("naissance");
-const password = document.getElementById("password").value;
 const subButton = document.getElementById("subButton");
 
 myForm.addEventListener('submit', function(event) {
     event.preventDefault();
+    var password = document.getElementById("password").value;
     var testDate = naissance.value;
     var dateToTest = testDate.substring(0, 4);
     console.log (testDate, dateToTest);
