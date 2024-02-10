@@ -1,0 +1,48 @@
+body {
+    background-color: #f4d292;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+fieldset{
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    width: 35%;
+    margin: 0 auto;
+    padding-top: 20px;
+    
+}
+h1 {
+    text-align: center;
+}
+#yourLName, #yourFName, #yourDOB, #subButton, #passwordDiv{
+    margin-bottom: 10px;
+}
+label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#yourGender  {
+    display: flex;
+    flex-direction: row;   
+}
+
+#naissance {
+    width: 100%;
+}
+#yourGender>label {
+    display: flex;
+    flex-direction: row;
+    margin-right: 2em;
+}
+
+.passSpan {
+    color: red;
+    justify-content: center;
+    display: flex;
+}

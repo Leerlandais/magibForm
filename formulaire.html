@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="formulaire.css">
+</head>
+<body>
+
+<h1>Formulaire de contact</h1>
+<fieldset>
+<form action="" id = "myForm">
+    <div id="yourLName">
+        <label for="nom">Nom</label>
+        <input type="text" name="nom" id="nom">
+    </div>
+    <div id="yourFName">
+        <label for="prenom">Prénom</label><input type="text" name="prenom" id="prenom">
+    </div>        
+    <div id="yourDOB">
+        <label for="dob">Date du Naissance</label><input type="date" name="dob" id="naissance">
+    </div>
+    <div id="yourGender">
+        <label>Genre</label>
+        <div><input type="radio" name="genre" id="homme" value="H" checked><label for="homme">Homme</label></div>
+        <div><input type="radio" name="genre" id="femme" value="F"><label for="femme">Femme</label></div>
+    </div>
+    <div id="passwordDiv">
+        <label for="pass">Password</label><input type="text" name="prenom" id="password" required>
+    </div>
+    <input type="submit" value="Submit Form" id="subButton">
+</form><br>
+<span class="passSpan" id="goodL">- Password must be 8 letters or more</span><br>
+<span class="passSpan" id="goodC">- One of which needs to be a capital</span><br>
+<span class="passSpan" id="goodN">- And it needs at least one number</span><br>
+<span class="passSpan" id="goodS">- And a symbol, too</span>
+</fieldset>
+<script src="formulaire.js"></script>
+</body>
+</html>
