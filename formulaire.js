@@ -16,10 +16,14 @@ myForm.addEventListener('submit', function(event) {
     var testDate = naissance.value;
     var dateToTest = testDate.substring(0, 4);
     console.log (testDate, dateToTest);
-    if (parseInt(dateToTest) > 2006 || testDate === ""){
+    if (parseInt(dateToTest) > 2023){
+        goodA.textContent = "I wasn't born yesterday and you weren't born tomorrow. Nice try";
+        goodA.style.display = "initial";
+    
+    }else if (parseInt(dateToTest) > 2006 || testDate === ""){
         goodA.style.display = "initial";
      return;   
-    }
+    }else
         if(password.length < 8){
             goodL.style.display = "initial";
             goodC.style.display = "none";
