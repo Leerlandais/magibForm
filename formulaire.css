@@ -1,6 +1,12 @@
 body {
     background-color: #f4d292;
 }
+
+h1 {
+    text-decoration: underline;
+    font-family: cursive;
+    font-style: italic;
+}
 form {
     display: flex;
     flex-direction: column;
@@ -14,6 +20,7 @@ fieldset{
     width: 35%;
     margin: 0 auto;
     padding-top: 20px;
+    
     
 }
 h1 {
@@ -38,14 +45,22 @@ label{
 #yourGender>label {
     display: flex;
     flex-direction: row;
-    margin-right: 2em;
+    margin-right: 5px;
+}
+
+#femLab {
+    margin-left: 1em;
+}
+
+#togglePassword {
+    width: 50px;
 }
 
 .passSpan {
     color: red;
     justify-content: center;
     display: flex;
-    opacity: 0;
+    display: none;
 }
 
 footer {

@@ -8,6 +8,7 @@ const nom = document.getElementById("nom");
 const prenom = document.getElementById("prenom");
 const naissance = document.getElementById("naissance");
 const subButton = document.getElementById("subButton");
+const togglePassword = document.querySelector("#togglePassword");
 
 myForm.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -16,17 +17,17 @@ myForm.addEventListener('submit', function(event) {
     var dateToTest = testDate.substring(0, 4);
     console.log (testDate, dateToTest);
     if (parseInt(dateToTest) > 2006 || testDate === ""){
-        goodA.style.opacity = 1;
+        goodA.style.display = "initial";
      return;   
     }
         if(password.length < 8){
-            goodL.style.opacity = 1;
+            goodL.style.display = "initial";
         }else if(/[A-Z]/.test(password) === false) {
-            goodC.style.opacity = 1;
+            goodC.style.display = "initial";
         }else if(/\d/.test(password) === false) {
-            goodN.style.opacity = 1;
+            goodN.style.display = "initial";
         }else if (/[!@#$%^,&;*()_+]/.test(password) === false) {
-            goodS.style.opacity = 1;
+            goodS.style.display = "initial";
         }else {
             document.querySelector("body").style.color = "green";
             setTimeout(function () {
@@ -36,4 +37,9 @@ myForm.addEventListener('submit', function(event) {
 
 });
 
-
+togglePassword.addEventListener("click", function () {
+    const type = password.getAttribute("type") === "password" ? "text" : "password";
+    password.setAttribute("type", type);
+    const butType = togglePassword.textContent === "Show" ? "Hide" : "Show";
+    togglePassword.textContent = butType;
+});
