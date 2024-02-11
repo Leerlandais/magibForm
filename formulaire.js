@@ -15,27 +15,36 @@ myForm.addEventListener('submit', function(event) {
     event.preventDefault();
     var password = document.getElementById("password").value;
     var testDate = naissance.value;
+    goodA.textContent = "Date du Naissance";
     var dateToTest = testDate.substring(0, 4);
     console.log (testDate, dateToTest);
     if (parseInt(dateToTest) > 2023){
         goodA.textContent = "I wasn't born yesterday and you weren't born tomorrow. Nice try";
-        goodA.style.display = "initial";
+    }else if (parseInt(dateToTest) > 2006){
+        return goodA.textContent = "Too young to access this site, sorry";
     
-    }else if (parseInt(dateToTest) > 2006 || testDate === ""){
-        goodA.style.display = "initial";
-     return;   
+    }else if (testDate = "") {
+        return;
     }else
         if(password.length >= 8){
             goodLet.style.color = "green";
+        }else {
+            goodLet.style.color = "red";
         }
         if(/[A-Z]/.test(password) === true) {
             goodCap.style.color = "green";
+        }else {
+            goodCap.style.color = "red";
         }
         if(/\d/.test(password) === true) {
             goodNum.style.color = "green";
+        }else {
+            goodNum.style.color = "red";
         }
-        if (/[!@#$%^&,;*()_+-]/.test(password) === true) {
+        if (/[!@#$%^'"/=:.?<>&,;*()_+-]/.test(password) === true) {
             goodSym.style.color = "green";
+        }else {
+            goodSym.style.color = "red";
         }
         if (password.length >= 8 && /[A-Z]/.test(password) && /\d/.test(password) && ((/[!@#$%^,&;*()_+]/.test(password)))) {
             document.querySelector("body").style.color = "green";

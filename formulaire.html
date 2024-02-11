@@ -19,7 +19,7 @@
         <label for="prenom">Prénom</label><input type="text" name="prenom" id="prenom" required>
     </div>        
     <div id="yourDOB">
-        <label for="dob">Date du Naissance</label><input type="date" name="dob" id="naissance" max="2099-12-31" required>
+        <label for="dob" id="goodA">Date du Naissance</label><input type="date" name="dob" id="naissance" max="2099-12-31" required>
     </div>
     <div id="yourGender">
         <label>Genre :-</label>
@@ -28,7 +28,7 @@
     </div>
     <div id="passwordDiv">
         <label for="pass">Password <span id="miniText">At least <span id="goodLet">8 letters</span>, a <span id="goodCap">Capital</span>, <span id="goodNum">Number</span> and a <span id="goodSym">Symbol</span> must be used at least once</span></label>
-        <input type="password" name="passw" id="password" required  onkeypress="doThisNow()">
+        <input type="password" name="password" id="password" required  onkeypress="doThisNow()">
         <button id="togglePassword">Show</button>
     </div>
     <input type="submit" value="Submit Form" id="subButton">
