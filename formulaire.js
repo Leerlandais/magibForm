@@ -34,7 +34,7 @@ myForm.addEventListener('submit', function(event) {
         if(/\d/.test(password) === true) {
             goodNum.style.color = "green";
         }
-        if (/[!@#$%^,&;*()_+]/.test(password) === true) {
+        if (/[!@#$%^&,;*()_+-]/.test(password) === true) {
             goodSym.style.color = "green";
         }
         if (password.length >= 8 && /[A-Z]/.test(password) && /\d/.test(password) && ((/[!@#$%^,&;*()_+]/.test(password)))) {
