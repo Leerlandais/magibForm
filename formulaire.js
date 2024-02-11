@@ -46,7 +46,7 @@ myForm.addEventListener('submit', function(event) {
         }else {
             goodSym.style.color = "red";
         }
-        if (password.length >= 8 && /[A-Z]/.test(password) && /\d/.test(password) && ((/[!@#$%^,&;*()_+]/.test(password)))) {
+        if (password.length >= 8 && /[A-Z]/.test(password) && /\d/.test(password) && ((/[!@#$%^'"/=:.?<>&,;*()_+-]/.test(password)))) {
             document.querySelector("body").style.color = "green";
             setTimeout(function () {
                 window.location.href = "https://2023.webdev-cf2m.be/Lee/Site/";
@@ -64,4 +64,3 @@ myForm.addEventListener('submit', function(event) {
 
 
 
-// add red and green colours to spans
