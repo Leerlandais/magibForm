@@ -26,27 +26,31 @@ myForm.addEventListener('submit', function(event) {
     }else if (testDate = "") {
         return;
     }else
-        if(password.length >= 8){
+    var lenCheck = password.length >= 8;
+    var capCheck = /[A-Z]/.test(password);
+    var numCheck = /\d/.test(password);
+    var symCheck = /[!@#$%^'"/=:.?<>&,;*()_+-]/.test(password);
+        if(lenCheck){
             goodLet.style.color = "green";
         }else {
             goodLet.style.color = "red";
         }
-        if(/[A-Z]/.test(password) === true) {
+        if(capCheck) {
             goodCap.style.color = "green";
         }else {
             goodCap.style.color = "red";
         }
-        if(/\d/.test(password) === true) {
+        if(numCheck) {
             goodNum.style.color = "green";
         }else {
             goodNum.style.color = "red";
         }
-        if (/[!@#$%^'"/=:.?<>&,;*()_+-]/.test(password) === true) {
+        if (symCheck) {
             goodSym.style.color = "green";
         }else {
             goodSym.style.color = "red";
         }
-        if (password.length >= 8 && /[A-Z]/.test(password) && /\d/.test(password) && ((/[!@#$%^'"/=:.?<>&,;*()_+-]/.test(password)))) {
+        if (lenCheck && capCheck && numCheck && symCheck) {
             document.querySelector("body").style.color = "green";
             setTimeout(function () {
                 window.location.href = "https://2023.webdev-cf2m.be/Lee/Site/";
