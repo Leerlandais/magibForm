@@ -25,11 +25,11 @@ myForm.addEventListener('submit', function(event) {
     
     }else if (testDate = "") {
         return;
-    }else
-    var lenCheck = password.length >= 8;
-    var capCheck = /[A-Z]/.test(password);
-    var numCheck = /\d/.test(password);
-    var symCheck = /[!@#$%^'"/=:.?<>&,;*()_+-]/.test(password);
+    }else{
+    const lenCheck = password.length >= 8;
+    const capCheck = /[A-Z]/.test(password);
+    const numCheck = /\d/.test(password);
+    const symCheck = /[!@#$%^'"/=:.?<>&,;*()_+-]/.test(password);
         if(lenCheck){
             goodLet.style.color = "green";
         }else {
@@ -57,6 +57,7 @@ myForm.addEventListener('submit', function(event) {
             }, 1200);
             
         }
+    }
     });
 }
     togglePassword.addEventListener("click", function () {
