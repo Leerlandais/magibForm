@@ -9,23 +9,16 @@ const naissance = document.getElementById("naissance");
 const subButton = document.getElementById("subButton");
 const togglePassword = document.querySelector("#togglePassword");
 
+togglePassword.addEventListener("click", function () {
+    const type = password.getAttribute("type") === "password" ? "text" : "password";
+    password.setAttribute("type", type);
+    const butType = togglePassword.textContent === "Show" ? "Hide" : "Show";
+    togglePassword.textContent = butType;
+});
 
-function doThisNow(){
-myForm.addEventListener('submit', function(event) {
-    event.preventDefault();
+
+function passCheck(){
     var password = document.getElementById("password").value;
-    var testDate = naissance.value;
-    goodA.textContent = "Date du Naissance";
-    var dateToTest = testDate.substring(0, 4);
-    console.log (testDate, dateToTest);
-    if (parseInt(dateToTest) > 2023){
-        goodA.textContent = "I wasn't born yesterday and you weren't born tomorrow. Nice try";
-    }else if (parseInt(dateToTest) > 2006){
-        return goodA.textContent = "Too young to access this site, sorry";
-    
-    }else if (testDate = "") {
-        return;
-    }else{
     const lenCheck = password.length >= 8;
     const capCheck = /[A-Z]/.test(password);
     const numCheck = /\d/.test(password);
@@ -50,7 +43,27 @@ myForm.addEventListener('submit', function(event) {
         }else {
             goodSym.style.color = "red";
         }
-        if (lenCheck && capCheck && numCheck && symCheck) {
+        
+        subButton.addEventListener('click', verifyAll(lenCheck, capCheck, numCheck, symCheck));
+    }
+
+function verifyAll(len, cap, num, sym){
+    myForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    console.log(len, cap, num, sym);
+    var testDate = naissance.value;
+    goodA.textContent = "Date du Naissance";
+    var dateToTest = testDate.substring(0, 4);
+    console.log (testDate, dateToTest);
+    if (parseInt(dateToTest) > 2023){
+        goodA.textContent = "I wasn't born yesterday and you weren't born tomorrow. Nice try";
+    }else if (parseInt(dateToTest) > 2006){
+        return goodA.textContent = "Too young to access this site, sorry";
+    
+    }else if (testDate = "") {
+        return;
+    }else{
+        if (len && cap && num && sym) {
             document.querySelector("body").style.color = "green";
             setTimeout(function () {
                 window.location.href = "https://2023.webdev-cf2m.be/Lee/Site/";
@@ -58,14 +71,11 @@ myForm.addEventListener('submit', function(event) {
             
         }
     }
-    });
+
+    
+});
 }
-    togglePassword.addEventListener("click", function () {
-        const type = password.getAttribute("type") === "password" ? "text" : "password";
-        password.setAttribute("type", type);
-        const butType = togglePassword.textContent === "Show" ? "Hide" : "Show";
-        togglePassword.textContent = butType;
-    });
+
 
 
 

@@ -28,7 +28,7 @@
     </div>
     <div id="passwordDiv">
         <label for="pass">Password <span id="miniText">At least <span id="goodLet">8 letters</span>, a <span id="goodCap">Capital</span>, <span id="goodNum">Number</span> and a <span id="goodSym">Symbol</span> must be used at least once</span></label>
-        <input type="password" name="password" id="password" required  onkeypress="doThisNow()">
+        <input type="password" name="password" id="password" required  oninput="passCheck()">
         <button id="togglePassword">Show</button>
     </div>
     <input type="submit" value="Submit Form" id="subButton">
